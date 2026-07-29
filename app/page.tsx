@@ -35,19 +35,19 @@ const screenshots = [
     src: "/screenshots/home.png",
     alt: "ROUTINE 홈 화면",
     label: "오늘의 흐름",
-    caption: "현재 수업과 자주 쓰는 기능을 한눈에",
+    caption: "현재 수업, TODO와 자주 쓰는 기능을 한눈에",
   },
   {
     src: "/screenshots/timetable.png",
-    alt: "ROUTINE 시간표 상세 화면",
-    label: "나의 시간표",
-    caption: "학교 시간표를 불러오고 직접 편집",
+    alt: "창동고 3학년 11반 ROUTINE 시간표 상세 화면",
+    label: "3학년 11반 시간표",
+    caption: "나이스 시간표를 불러오고 직접 편집",
   },
   {
     src: "/screenshots/calendar.png",
     alt: "ROUTINE 월간 캘린더 화면",
     label: "통합 캘린더",
-    caption: "학사일정과 개인 일정을 함께 관리",
+    caption: "학교별 학사일정과 개인 일정을 함께 관리",
   },
   {
     src: "/screenshots/notifications.png",
@@ -277,7 +277,7 @@ export default function Home() {
               <span aria-hidden="true">↓</span>
               ROUTINE v1.0 다운로드
             </a>
-            <small>APK · 약 23.8MB · Android 7.0 이상</small>
+            <small>APK · 약 23.1MB · Android 7.0 이상</small>
           </div>
           <ol className="install-steps">
             <li>
@@ -318,8 +318,8 @@ export default function Home() {
             <h3>다운로드 파일을 확인하세요</h3>
             <p className="hash-label">SHA-256</p>
             <code>
-              91E2F26B F0A6C0A5 F23207D3 2E87D81C 3929E3E8 9B2CD3B6
-              B38F1E7E F674F41F
+              198E7DD3 C722BA0C 46F9DAF2 07569ED2 586473E0 19756176
+              B1C5EAC3 1A0965A1
             </code>
           </article>
         </div>

@@ -42,6 +42,8 @@ test("server-renders the ROUTINE download landing page", async () => {
   assert.match(html, /ROUTINE-v1\.0-20260729\.apk/);
   assert.match(html, /나이스 시간표를 그대로/);
   assert.match(html, /학사일정과 나의 계획/);
+  assert.match(html, /현재 수업, TODO와 자주 쓰는 기능을 한눈에/);
+  assert.match(html, /3학년 11반 시간표/);
   assert.match(html, /ROUTINE의 실제 화면을 그대로 확인해 보세요/);
   assert.match(html, /두 화면 모두에 자연스럽게 맞춰지는 UI/);
   assert.match(html, /좁은 화면과 넓은 화면 어디에서든/);
@@ -53,7 +55,8 @@ test("server-renders the ROUTINE download landing page", async () => {
   assert.match(html, /\/screenshots\/responsive-ui-showcase\.png/);
   assert.doesNotMatch(html, /앱과 닮은 웹, 웹에서 만나는 앱/);
   assert.match(html, /현재 파일은 개발자 디버그 서명의 테스트 배포판/);
-  assert.match(html, /91E2F26B/);
+  assert.match(html, /약 23\.1MB/);
+  assert.match(html, /198E7DD3/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
 });
 
