@@ -566,6 +566,11 @@ footer a:hover {
   color: var(--mint);
 }
 
+.story-tag-community {
+  background: #fff0e4;
+  color: #c86826;
+}
+
 .story-copy ul {
   margin: 28px 0 0;
   padding: 0;
@@ -640,6 +645,110 @@ footer a:hover {
   background: #cfece0;
 }
 
+.todo-glow {
+  background: #f8f5fc;
+}
+
+.todo-glow::before {
+  background: #e4d9f6;
+}
+
+.community-glow {
+  background: #fff8f2;
+}
+
+.community-glow::before {
+  background: #ffe0c7;
+}
+
+.community-app-preview {
+  position: relative;
+  z-index: 1;
+  width: min(390px, calc(100% - 48px));
+  min-height: 560px;
+  padding: 28px 22px;
+  overflow: hidden;
+  border: 9px solid #2b2630;
+  border-radius: 42px;
+  background: #faf8ff;
+  color: #211929;
+  box-shadow: 0 28px 65px rgba(70, 47, 83, 0.2);
+}
+
+.community-app-header {
+  margin-bottom: 26px;
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.55rem;
+}
+
+.community-app-header strong {
+  font-size: 1.45rem;
+}
+
+.community-login-card,
+.community-post {
+  border-radius: 24px;
+  background: white;
+}
+
+.community-login-card {
+  padding: 19px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.community-login-card div {
+  min-width: 0;
+}
+
+.community-login-card strong,
+.community-login-card small {
+  display: block;
+}
+
+.community-login-card small {
+  margin-top: 3px;
+  color: #746b79;
+  font-size: 0.72rem;
+}
+
+.community-login-card b {
+  color: var(--brand);
+  font-size: 0.84rem;
+}
+
+.community-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--brand-soft);
+  border-radius: 50%;
+  color: var(--brand);
+  font-weight: 900;
+}
+
+.community-post {
+  margin-top: 14px;
+  padding: 22px;
+}
+
+.community-post p {
+  margin: 7px 0 16px;
+  color: #746b79;
+  font-size: 0.88rem;
+}
+
+.community-post small {
+  color: #918895;
+  font-size: 0.7rem;
+}
+
 .screenshots-section {
   padding-top: 180px;
 }
@@ -656,6 +765,82 @@ footer a:hover {
   font-weight: 900;
   line-height: 1.14;
   letter-spacing: -0.06em;
+}
+
+.theme-showcase {
+  margin-bottom: 72px;
+  padding: 52px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(440px, 1.28fr);
+  align-items: center;
+  gap: 54px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 44px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(138, 111, 209, 0.16), transparent 35%),
+    var(--surface);
+}
+
+.theme-showcase-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  line-height: 1.18;
+  letter-spacing: -0.055em;
+}
+
+.theme-showcase-copy > p {
+  margin: 20px 0 0;
+  color: var(--slate);
+  font-size: 1.02rem;
+}
+
+.theme-phone-pair {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.theme-phone {
+  position: relative;
+  width: min(240px, 42%);
+  margin: 0;
+  padding: 7px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 32px;
+  background: #17131b;
+  box-shadow: 0 24px 60px rgba(42, 31, 58, 0.24);
+}
+
+.theme-phone-light {
+  transform: translateY(-22px);
+}
+
+.theme-phone-dark {
+  transform: translateY(22px);
+}
+
+.theme-phone img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.theme-phone figcaption {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  left: 16px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  background: rgba(19, 16, 23, 0.78);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 850;
+  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 .responsive-showcase {
@@ -975,6 +1160,10 @@ footer > div {
     grid-template-columns: 1fr;
   }
 
+  .theme-showcase {
+    grid-template-columns: 1fr;
+  }
+
   .screenshot-card:nth-child(even) {
     transform: translateY(0);
   }
@@ -1092,6 +1281,27 @@ footer > div {
     padding: 24px;
     gap: 30px;
     border-radius: 34px;
+  }
+
+  .theme-showcase {
+    margin-bottom: 54px;
+    padding: 24px;
+    gap: 24px;
+    border-radius: 34px;
+  }
+
+  .theme-phone-pair {
+    min-height: 440px;
+    gap: 12px;
+  }
+
+  .theme-phone {
+    width: 47%;
+    border-radius: 24px;
+  }
+
+  .theme-phone img {
+    border-radius: 18px;
   }
 
   .responsive-showcase-visual {

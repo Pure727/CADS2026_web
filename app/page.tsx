@@ -233,6 +233,80 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="story-row">
+          <div className="story-copy">
+            <span className="story-tag">TODO</span>
+            <h2>오늘 할 일과 공부 계획을 빠짐없이</h2>
+            <p>
+              날짜별 할 일과 공부 계획을 한곳에 정리하고, 완료한 항목은 바로
+              체크하세요. 간단한 메모까지 함께 남겨 오늘 해야 할 공부를
+              선명하게 관리할 수 있습니다.
+            </p>
+            <ul>
+              <li>날짜별 할 일과 공부 계획 추가</li>
+              <li>완료 여부를 한 번에 확인</li>
+              <li>과제 범위와 준비물 메모</li>
+            </ul>
+          </div>
+          <div className="story-phone-wrap todo-glow">
+            <div className="phone">
+              <div className="phone-speaker" />
+              <img
+                src="/screenshots/todo.png"
+                alt="영어 단어 암기 계획을 등록한 ROUTINE TODO 화면"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="story-row story-row-reverse">
+          <div className="story-copy">
+            <span className="story-tag story-tag-community">커뮤니티</span>
+            <h2>학교생활에 필요한 정보를 학생들과</h2>
+            <p>
+              시험 준비 팁부터 학교생활 정보까지 게시글로 나누고 댓글로
+              이야기하세요. 로그인하면 글과 댓글을 작성하고, 로그인 전에도
+              게시글을 읽어볼 수 있습니다.
+            </p>
+            <ul>
+              <li>로그인 전 게시글 읽기 지원</li>
+              <li>게시글 작성과 댓글 소통</li>
+              <li>ROUTINE 계정으로 안전하게 이용</li>
+            </ul>
+          </div>
+          <div className="story-phone-wrap community-glow">
+            <div
+              className="community-app-preview"
+              role="img"
+              aria-label="ROUTINE 커뮤니티 게시글 화면 예시"
+            >
+              <div className="community-app-header">
+                <span aria-hidden="true">←</span>
+                <strong>커뮤니티</strong>
+                <span aria-hidden="true">↻</span>
+              </div>
+              <div className="community-login-card">
+                <span className="community-avatar" aria-hidden="true">○</span>
+                <div>
+                  <strong>읽기 전용</strong>
+                  <small>글과 댓글을 작성하려면 로그인해 주세요.</small>
+                </div>
+                <b>로그인</b>
+              </div>
+              <div className="community-post">
+                <strong>수행평가 준비 팁 공유해요</strong>
+                <p>발표 자료는 핵심 내용부터 정리하면 훨씬 편해요.</p>
+                <small>ROUTINE 학생 · 방금 전</small>
+              </div>
+              <div className="community-post">
+                <strong>시험 기간 공부 루틴</strong>
+                <p>오늘 할 일을 TODO에 나눠서 같이 관리해 보세요.</p>
+                <small>창동고 학생 · 12분 전</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="section screenshots-section" id="screenshots">
@@ -242,6 +316,41 @@ export default function Home() {
             ROUTINE의 실제 화면을 그대로 확인해 보세요.
           </p>
         </div>
+
+        <article className="theme-showcase">
+          <div className="theme-showcase-copy">
+            <span className="story-tag">라이트 · 다크</span>
+            <h2>주변 밝기에 맞춰 편안하게</h2>
+            <p>
+              밝은 곳에서는 선명한 라이트 모드로, 밤에는 눈부심을 줄인 다크
+              모드로 전환할 수 있습니다. 어느 모드에서도 같은 정보 구조와
+              ROUTINE의 색감을 유지합니다.
+            </p>
+            <div className="ratio-list" aria-label="화면 테마">
+              <span>라이트 모드</span>
+              <span>다크 모드</span>
+              <span>즉시 전환</span>
+            </div>
+          </div>
+          <div className="theme-phone-pair">
+            <figure className="theme-phone theme-phone-light">
+              <img
+                src="/screenshots/home-light.png"
+                alt="ROUTINE 라이트 모드 홈 화면"
+                loading="lazy"
+              />
+              <figcaption>라이트 모드</figcaption>
+            </figure>
+            <figure className="theme-phone theme-phone-dark">
+              <img
+                src="/screenshots/home-dark.png"
+                alt="ROUTINE 다크 모드 홈 화면"
+                loading="lazy"
+              />
+              <figcaption>다크 모드</figcaption>
+            </figure>
+          </div>
+        </article>
 
         <article className="responsive-showcase">
           <div className="responsive-showcase-copy">
