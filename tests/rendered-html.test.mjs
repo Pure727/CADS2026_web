@@ -44,6 +44,10 @@ test("server-renders the ROUTINE download landing page", async () => {
   assert.match(html, /학사일정과 나의 계획/);
   assert.match(html, /현재 수업, TODO와 자주 쓰는 기능을 한눈에/);
   assert.match(html, /3학년 11반 시간표/);
+  assert.match(html, /<strong>확률과 통계<\/strong>/);
+  assert.match(html, /TODO와 공부 계획을 한 번에/);
+  assert.match(html, /학생들과 나누는 커뮤니티/);
+  assert.match(html, /로그인하고 안전하게 연결/);
   assert.match(html, /ROUTINE의 실제 화면을 그대로 확인해 보세요/);
   assert.match(html, /두 화면 모두에 자연스럽게 맞춰지는 UI/);
   assert.match(html, /좁은 화면과 넓은 화면 어디에서든/);

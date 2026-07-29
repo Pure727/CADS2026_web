@@ -28,6 +28,24 @@ const features = [
     description:
       "시간표와 일정을 클라우드에 안전하게 백업하고 복원합니다. 자동 백업을 켜두면 변경한 내용도 챙겨 보관해요.",
   },
+  {
+    marker: "할 일",
+    title: "TODO와 공부 계획을 한 번에",
+    description:
+      "날짜별 할 일과 공부 계획을 정리하고 완료 여부를 관리합니다. 캘린더와 함께 보며 오늘 해야 할 일을 놓치지 않아요.",
+  },
+  {
+    marker: "소통",
+    title: "학생들과 나누는 커뮤니티",
+    description:
+      "학교생활에 필요한 정보를 게시글로 나누고 댓글로 의견을 주고받습니다. 로그인한 ROUTINE 사용자와 함께 이용할 수 있어요.",
+  },
+  {
+    marker: "계정",
+    title: "로그인하고 안전하게 연결",
+    description:
+      "ROUTINE 계정으로 로그인해 커뮤니티와 클라우드 백업을 이용합니다. 휴대폰을 바꿔도 내 데이터를 다시 불러올 수 있어요.",
+  },
 ];
 
 const screenshots = [
@@ -83,7 +101,7 @@ export default function Home() {
           </p>
           <h1>ROUTINE</h1>
           <p className="hero-description">
-            시간표, 학사일정, 나의 계획까지 흩어진 학교생활을 하나로.
+            시간표, 학사일정, TODO와 커뮤니티까지 학교생활을 하나로.
             <br className="desktop-only" /> 매일 확인하기 편한 루틴을 만들어
             보세요.
           </p>
@@ -109,8 +127,8 @@ export default function Home() {
         <div className="hero-visual" aria-label="ROUTINE 앱 홈 화면 미리보기">
           <div className="ambient-card ambient-card-top">
             <span>지금</span>
-            <strong>수업 시간이 아니에요</strong>
-            <small>다음 수업도 미리 확인해요</small>
+            <strong>확률과 통계</strong>
+            <small>3교시 · 창동고 3학년 11반</small>
           </div>
           <div className="phone phone-hero">
             <div className="phone-speaker" />

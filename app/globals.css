@@ -484,6 +484,10 @@ footer a:hover {
   box-shadow: var(--shadow);
 }
 
+.feature-card:last-child:nth-child(4n + 3) {
+  grid-column: span 2;
+}
+
 .feature-marker {
   width: 56px;
   height: 56px;
@@ -1072,6 +1076,10 @@ footer > div {
 
   .feature-card {
     min-height: 255px;
+  }
+
+  .feature-card:last-child:nth-child(4n + 3) {
+    grid-column: auto;
   }
 
   .product-story,
