@@ -43,10 +43,13 @@ test("server-renders the ROUTINE download landing page", async () => {
   assert.match(html, /나이스 시간표를 그대로/);
   assert.match(html, /학사일정과 나의 계획/);
   assert.match(html, /ROUTINE의 실제 화면을 그대로 확인해 보세요/);
-  assert.match(html, /갤럭시 Z Fold의 두 화면에 자연스럽게/);
-  assert.match(html, /다양한 화면 비율에 맞춰 자연스럽게/);
-  assert.match(html, /커버 화면/);
-  assert.match(html, /펼친 화면/);
+  assert.match(html, /두 화면 모두에 자연스럽게 맞춰지는 UI/);
+  assert.match(html, /좁은 화면과 넓은 화면 어디에서든/);
+  assert.match(html, /반응형 레이아웃/);
+  assert.match(
+    html,
+    /갤럭시 Z Fold의 커버 화면과 펼친 화면을 활용한 적용 예시/,
+  );
   assert.match(html, /\/screenshots\/responsive-ui-showcase\.png/);
   assert.doesNotMatch(html, /앱과 닮은 웹, 웹에서 만나는 앱/);
   assert.match(html, /현재 파일은 개발자 디버그 서명의 테스트 배포판/);

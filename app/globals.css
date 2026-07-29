@@ -709,6 +709,14 @@ footer a:hover {
   width: 100%;
 }
 
+.responsive-showcase-visual figcaption {
+  padding: 13px 18px 15px;
+  background: var(--card);
+  color: var(--slate);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

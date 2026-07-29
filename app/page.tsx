@@ -228,16 +228,15 @@ export default function Home() {
         <article className="responsive-showcase">
           <div className="responsive-showcase-copy">
             <span className="story-tag">반응형 UI</span>
-            <h2>갤럭시 Z Fold의 두 화면에 자연스럽게</h2>
+            <h2>두 화면 모두에 자연스럽게 맞춰지는 UI</h2>
             <p>
-              접었을 때의 좁은 커버 화면부터 펼쳤을 때의 넓은 메인 화면까지,
-              ROUTINE의 정보 구조와 여백이 다양한 화면 비율에 맞춰 자연스럽게
-              적용됩니다.
+              좁은 화면과 넓은 화면 어디에서든 ROUTINE의 정보 구조와 여백이
+              화면 비율에 맞춰 자연스럽게 적용됩니다.
             </p>
             <div className="ratio-list" aria-label="지원 화면 유형">
-              <span>Galaxy Z Fold</span>
-              <span>커버 화면</span>
-              <span>펼친 화면</span>
+              <span>좁은 화면</span>
+              <span>넓은 화면</span>
+              <span>반응형 레이아웃</span>
             </div>
           </div>
           <figure className="responsive-showcase-visual">
@@ -246,6 +245,9 @@ export default function Home() {
               alt="갤럭시 Z Fold의 커버 화면과 펼친 화면에 적용된 ROUTINE 반응형 UI"
               loading="lazy"
             />
+            <figcaption>
+              갤럭시 Z Fold의 커버 화면과 펼친 화면을 활용한 적용 예시입니다.
+            </figcaption>
           </figure>
         </article>
         <div className="screenshot-grid">
