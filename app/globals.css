@@ -174,13 +174,10 @@ footer a:hover {
 
 .hero h1 {
   margin: 0;
+  color: var(--brand);
   font-size: clamp(3.25rem, 6.3vw, 5.8rem);
   line-height: 1.03;
   letter-spacing: -0.065em;
-}
-
-.hero h1 span {
-  color: var(--brand);
 }
 
 .hero-description {
@@ -493,24 +490,10 @@ footer a:hover {
   display: grid;
   place-items: center;
   border-radius: 19px;
+  background: var(--brand-pale);
   color: var(--brand);
   font-size: 0.74rem;
   font-weight: 900;
-}
-
-.marker-1,
-.marker-2 {
-  background: var(--brand-pale);
-}
-
-.marker-3 {
-  background: var(--mint-pale);
-  color: var(--mint);
-}
-
-.marker-4 {
-  background: #edf1ff;
-  color: #4561a8;
 }
 
 .feature-card h3 {
@@ -655,6 +638,75 @@ footer a:hover {
 
 .screenshots-section {
   padding-top: 180px;
+}
+
+.screen-heading {
+  margin-bottom: 42px;
+}
+
+.screen-lead {
+  max-width: 880px;
+  margin-top: 0 !important;
+  color: var(--ink) !important;
+  font-size: clamp(2.45rem, 5vw, 4.5rem) !important;
+  font-weight: 900;
+  line-height: 1.14;
+  letter-spacing: -0.06em;
+}
+
+.responsive-showcase {
+  margin-bottom: 72px;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 44px;
+  background: var(--surface);
+}
+
+.responsive-showcase-copy h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  line-height: 1.18;
+  letter-spacing: -0.055em;
+}
+
+.responsive-showcase-copy > p {
+  margin: 20px 0 0;
+  color: var(--slate);
+  font-size: 1.02rem;
+}
+
+.ratio-list {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ratio-list span {
+  padding: 7px 12px;
+  border: 1px solid var(--brand-pale-strong);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.responsive-showcase-visual {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #1a1620;
+  box-shadow: 0 24px 60px rgba(42, 31, 58, 0.18);
+}
+
+.responsive-showcase-visual img {
+  width: 100%;
 }
 
 .screenshot-grid {
@@ -907,6 +959,10 @@ footer > div {
     gap: 30px 18px;
   }
 
+  .responsive-showcase {
+    grid-template-columns: 1fr;
+  }
+
   .screenshot-card:nth-child(even) {
     transform: translateY(0);
   }
@@ -1013,6 +1069,17 @@ footer > div {
   .product-story,
   .screenshots-section {
     padding-top: 130px;
+  }
+
+  .responsive-showcase {
+    margin-bottom: 54px;
+    padding: 24px;
+    gap: 30px;
+    border-radius: 34px;
+  }
+
+  .responsive-showcase-visual {
+    border-radius: 22px;
   }
 
   .story-row {

@@ -35,11 +35,20 @@ test("server-renders the ROUTINE download landing page", async () => {
   const html = await response.text();
   assert.match(html, /<html[^>]*lang="ko"/i);
   assert.match(html, /ROUTINE \| 학생을 위한 통합 스케줄러/);
-  assert.match(html, /오늘의 흐름을/);
+  assert.match(html, /<h1>ROUTINE<\/h1>/);
+  assert.match(html, />화면<\/a>/);
+  assert.doesNotMatch(html, /오늘의 흐름을 한눈에, ROUTINE/);
   assert.match(html, /Android용 다운로드/);
   assert.match(html, /ROUTINE-v1\.0-20260729\.apk/);
   assert.match(html, /나이스 시간표를 그대로/);
   assert.match(html, /학사일정과 나의 계획/);
+  assert.match(html, /ROUTINE의 실제 화면을 그대로 확인해 보세요/);
+  assert.match(html, /갤럭시 Z Fold의 두 화면에 자연스럽게/);
+  assert.match(html, /다양한 화면 비율에 맞춰 자연스럽게/);
+  assert.match(html, /커버 화면/);
+  assert.match(html, /펼친 화면/);
+  assert.match(html, /\/screenshots\/responsive-ui-showcase\.png/);
+  assert.doesNotMatch(html, /앱과 닮은 웹, 웹에서 만나는 앱/);
   assert.match(html, /현재 파일은 개발자 디버그 서명의 테스트 배포판/);
   assert.match(html, /91E2F26B/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);
@@ -64,7 +73,17 @@ test("builds a script-free GitHub Pages artifact with project paths", async () =
   assert.match(html, /https:\/\/pure727\.github\.io\/CADS2026_web\/og\.png/);
   assert.match(html, /\/CADS2026_web\/assets\//);
   assert.match(html, /\/CADS2026_web\/screenshots\/home\.png/);
+  assert.match(
+    html,
+    /\/CADS2026_web\/screenshots\/responsive-ui-showcase\.png/,
+  );
   assert.doesNotMatch(html, /<script\b/i);
   await access(new URL("../pages-dist/.nojekyll", import.meta.url));
   await access(new URL("../pages-dist/og.png", import.meta.url));
+  await access(
+    new URL(
+      "../pages-dist/screenshots/responsive-ui-showcase.png",
+      import.meta.url,
+    ),
+  );
 });

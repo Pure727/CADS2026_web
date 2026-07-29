@@ -67,7 +67,7 @@ export default function Home() {
         </a>
         <nav aria-label="주요 메뉴">
           <a href="#features">기능</a>
-          <a href="#screenshots">스크린샷</a>
+          <a href="#screenshots">화면</a>
           <a href="#install">설치 안내</a>
         </nav>
         <a className="header-download" href={downloadUrl}>
@@ -81,11 +81,7 @@ export default function Home() {
             <span className="eyebrow-dot" />
             학생을 위한 통합 스케줄러
           </p>
-          <h1>
-            오늘의 흐름을
-            <br />
-            <span>한눈에, ROUTINE</span>
-          </h1>
+          <h1>ROUTINE</h1>
           <p className="hero-description">
             시간표, 학사일정, 나의 계획까지 흩어진 학교생활을 하나로.
             <br className="desktop-only" /> 매일 확인하기 편한 루틴을 만들어
@@ -156,9 +152,7 @@ export default function Home() {
         <div className="feature-grid">
           {features.map((feature, index) => (
             <article className="feature-card" key={feature.title}>
-              <span className={`feature-marker marker-${index + 1}`}>
-                {feature.marker}
-              </span>
+              <span className="feature-marker">{feature.marker}</span>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
               <span className="feature-index">
@@ -224,11 +218,36 @@ export default function Home() {
       </section>
 
       <section className="section screenshots-section" id="screenshots">
-        <div className="section-heading section-heading-left">
-          <p className="section-kicker">앱 미리보기</p>
-          <h2>앱과 닮은 웹, 웹에서 만나는 앱</h2>
-          <p>ROUTINE의 실제 화면을 그대로 확인해 보세요.</p>
+        <div className="section-heading section-heading-left screen-heading">
+          <p className="section-kicker">앱 화면</p>
+          <p className="screen-lead">
+            ROUTINE의 실제 화면을 그대로 확인해 보세요.
+          </p>
         </div>
+
+        <article className="responsive-showcase">
+          <div className="responsive-showcase-copy">
+            <span className="story-tag">반응형 UI</span>
+            <h2>갤럭시 Z Fold의 두 화면에 자연스럽게</h2>
+            <p>
+              접었을 때의 좁은 커버 화면부터 펼쳤을 때의 넓은 메인 화면까지,
+              ROUTINE의 정보 구조와 여백이 다양한 화면 비율에 맞춰 자연스럽게
+              적용됩니다.
+            </p>
+            <div className="ratio-list" aria-label="지원 화면 유형">
+              <span>Galaxy Z Fold</span>
+              <span>커버 화면</span>
+              <span>펼친 화면</span>
+            </div>
+          </div>
+          <figure className="responsive-showcase-visual">
+            <img
+              src="/screenshots/responsive-ui-showcase.png"
+              alt="갤럭시 Z Fold의 커버 화면과 펼친 화면에 적용된 ROUTINE 반응형 UI"
+              loading="lazy"
+            />
+          </figure>
+        </article>
         <div className="screenshot-grid">
           {screenshots.map((screenshot) => (
             <figure className="screenshot-card" key={screenshot.label}>
