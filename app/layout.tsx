@@ -19,6 +19,7 @@ export async function generateMetadata(): Promise<Metadata> {
     requestHeaders.get("x-forwarded-proto") ??
     (host.startsWith("localhost") ? "http" : "https");
   const origin = `${protocol}://${host}`;
+  const publicUrl = process.env.SITE_URL ?? origin;
   const title = "ROUTINE | 학생을 위한 통합 스케줄러";
   const description =
     "시간표, 학사일정, 알림, 백업까지. Android용 ROUTINE을 다운로드하세요.";
@@ -35,13 +36,13 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       type: "website",
       locale: "ko_KR",
-      url: origin,
+      url: publicUrl,
       siteName: "ROUTINE",
       title,
       description,
       images: [
         {
-          url: `${origin}/og.png`,
+          url: `${publicUrl}/og.png`,
           width: 1200,
           height: 630,
           alt: "ROUTINE 학생 통합 스케줄러",
@@ -52,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og.png`],
+      images: [`${publicUrl}/og.png`],
     },
   };
 }

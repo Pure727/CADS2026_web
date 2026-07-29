@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -51,4 +52,19 @@ test("emits absolute social preview metadata from the request host", async () =>
   assert.match(html, /https:\/\/routine\.example\/og\.png/);
   assert.match(html, /summary_large_image/);
   assert.match(html, /ROUTINE 학생 통합 스케줄러/);
+});
+
+test("builds a script-free GitHub Pages artifact with project paths", async () => {
+  const html = await readFile(
+    new URL("../pages-dist/index.html", import.meta.url),
+    "utf8",
+  );
+
+  assert.match(html, /ROUTINE \| 학생을 위한 통합 스케줄러/);
+  assert.match(html, /https:\/\/pure727\.github\.io\/CADS2026_web\/og\.png/);
+  assert.match(html, /\/CADS2026_web\/assets\//);
+  assert.match(html, /\/CADS2026_web\/screenshots\/home\.png/);
+  assert.doesNotMatch(html, /<script\b/i);
+  await access(new URL("../pages-dist/.nojekyll", import.meta.url));
+  await access(new URL("../pages-dist/og.png", import.meta.url));
 });
